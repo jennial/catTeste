@@ -1,0 +1,30 @@
+
+<section class="section">
+    <header class="header">
+        <h1>--</h1>        
+    </header>
+    <form>
+        <label>
+            Lista de opções:
+        </label><br>
+<!-- 
+        <div *ngFor="let opcao of opcoes">
+            <app-opcoes [opcoes]="opcao" ></app-opcoes>     
+        </div>
+     -->
+        <section >
+            <p>
+            <mat-checkbox formControlName="opcao" (change)="alerta()">
+                <app-opcoes [opcoes]="opcaoo" *ngFor="let opcaoo of opcoes;let i= index"></app-opcoes>     
+
+   
+            </mat-checkbox>
+            </p>
+        </section>
+    
+
+        <div class="button">
+        <button class="botao" (click)="enviarResposta()">Enviar</button>
+        </div>
+    </form>
+</section>
